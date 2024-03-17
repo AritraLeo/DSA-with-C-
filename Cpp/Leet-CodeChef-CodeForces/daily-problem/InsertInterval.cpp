@@ -25,7 +25,8 @@ public:
 
         // Add all intervals that end before the new interval starts
         while (i < n && intervals[i][1] < newInterval[0]) {
-            mergedIntervals.push_back(intervals[i++]);
+            mergedIntervals.push_back(intervals[i]);
+            i++;
         }
 
         // Merge intervals that overlap with the new interval
@@ -38,7 +39,8 @@ public:
 
         // Add remaining intervals
         while (i < n) {
-            mergedIntervals.push_back(intervals[i++]);
+            mergedIntervals.push_back(intervals[i]);
+            i++;
         }
 
         return mergedIntervals;

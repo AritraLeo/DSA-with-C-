@@ -75,7 +75,7 @@ public:
                     if (checkEles(board, i, j, word, 0))
                         return true;
                 }
-            }
+            }   
         }
         return false;
     }

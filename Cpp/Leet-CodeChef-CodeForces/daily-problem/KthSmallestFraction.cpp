@@ -4,6 +4,19 @@
 
 using namespace std;
 
+/*
+Initialize two pointers numerator and denominator to represent the numerator and denominator of the current fraction respectively.
+Start with the smallest possible fraction, where the numerator is the smallest element in the array and the denominator is the largest element in the array.
+Use a two-pointer approach to iterate over all possible fractions:
+Start with numerator = arr[0] and denominator = arr[n-1].
+Count the number of fractions in the array that are smaller than or equal to the current fraction.
+Adjust the numerator and denominator based on the count:
+If the count is less than k, increase the numerator to the next greater element in the array.
+If the count is greater than or equal to k, decrease the denominator to the next smaller element in the array.
+Repeat this process until numerator and denominator represent the k-th smallest fraction.
+Return the numerator and denominator
+*/
+
 class Solution {
 public:
     vector<int> kthSmallestPrimeFraction(vector<int>& arr, int k) {

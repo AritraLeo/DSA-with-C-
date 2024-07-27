@@ -4,6 +4,15 @@
 
 using namespace std;
 
+/*
+Identify all the initially rotten oranges and enqueue them. These will be the starting points for the BFS.
+Keep track of the number of fresh oranges. This helps to determine if it's possible to rot all oranges.
+Perform BFS to rot adjacent fresh oranges, updating the grid and reducing the count of fresh oranges.
+Keep track of the time taken. Each level in the BFS corresponds to one minute of elapsed time.
+Check if all fresh oranges have been rotted. If there are still fresh oranges left after the BFS completes, return -1. Otherwise, return the time taken.
+
+*/
+
 class Solution
 {
 public:
